@@ -17,7 +17,8 @@ Pod::Spec.new do |s|
   s.platform         = :ios, '6.0'
   s.source           = { :git => "https://github.com/wujichao/CTAssetsPickerController.git", :tag => "v2.9.2" }
   s.source_files     = "CTAssetsPickerController/*.{h,m}"
-  s.resource_bundles = { "CTAssetsPickerController" => ["Resources/CTAssetsPicker.xcassets/*/*.png", "Resources/*.lproj"] }
+  s.resource_bundles = { "CTAssetsPickerController" => ["Resources/*.lproj"] }
+  s.resources        = "Resources/CTAssetsPicker.xcassets"
   s.frameworks       = "AssetsLibrary", "MediaPlayer"
   s.requires_arc     = true
 end
