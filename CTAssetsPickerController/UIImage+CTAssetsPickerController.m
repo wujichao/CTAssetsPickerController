@@ -7,13 +7,12 @@
 //
 
 #import "UIImage+CTAssetsPickerController.h"
-#import "NSBundle+CTAssetsPickerController.h"
 
 @implementation UIImage (CTAssetsPickerController)
 
 + (UIImage *)ctassetsPickerControllerImageNamed:(NSString *)name
 {
-    return [UIImage imageNamed:name inBundle:[NSBundle ctassetsPickerControllerBundle] compatibleWithTraitCollection:nil];
+    return [UIImage imageNamed:[NSString stringWithFormat:@"CTAssetsPickerController.bundle/%@", name]];
 }
 
 @end
